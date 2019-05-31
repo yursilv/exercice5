@@ -22,6 +22,8 @@
     npm install
     npm start
 
+В браузере открыть http://localhost:8080/
+
 Также для тестирования API можно запустить:
 
     cd backend

@@ -31,23 +31,23 @@
 Проект лучше запускать в утреннее или дневное время. Вечером есть вероятность сильной нагрузки на сервер базы данных.
 Если есть желание запустить проект на локальной базе данных, нужно внести поправки в backend/knexfile.js.
 
-1) Необходимо исправить линию:
+1)Необходимо исправить линию:
 
->connection: 'postgres://yursilv_test:test0079835@postgresql-yursilv.alwaysdata.net:5432/yursilv_exercice5'
-
-На следующую:
-
->connection: 'postgres://ПОЛЬЗОВАТЕЛЬ:ПАРОЛЬ@localhost:5432/ОСНОВНАЯ БАЗА ДАННЫХ (ДОЛЖНА БЫТЬ ПУСТАЯ)'
-
-2) А также линию:
-
->connection: 'postgres://yursilv_test:test0079835@postgresql-yursilv.alwaysdata.net:5432/yursilv_exercice5_test'
+    connection: 'postgres://yursilv_test:test0079835@postgresql-yursilv.alwaysdata.net:5432/yursilv_exercice5'
 
 На следующую:
 
->connection: 'postgres://ПОЛЬЗОВАТЕЛЬ:ПАРОЛЬ@localhost:5432/БАЗА ДАННЫХ ДЛЯ ТЕСТОВ (ДОЛЖНА БЫТЬ ПУСТАЯ)'
+    connection: 'postgres://ПОЛЬЗОВАТЕЛЬ:ПАРОЛЬ@localhost:5432/ОСНОВНАЯ БАЗА ДАННЫХ (ДОЛЖНА БЫТЬ ПУСТАЯ)'
 
-3) А затем запустить следующие команды:
+2)А также линию:
+
+    connection: 'postgres://yursilv_test:test0079835@postgresql-yursilv.alwaysdata.net:5432/yursilv_exercice5_test'
+
+На следующую:
+
+    connection: 'postgres://ПОЛЬЗОВАТЕЛЬ:ПАРОЛЬ@localhost:5432/БАЗА ДАННЫХ ДЛЯ ТЕСТОВ (ДОЛЖНА БЫТЬ ПУСТАЯ)'
+
+3)Затем запустить следующие команды:
 
     cd backend
     knex migrate:latest --env development

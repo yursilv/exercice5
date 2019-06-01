@@ -14,12 +14,10 @@
           </figcaption>
         </figure>
       </router-link>
-      <div id="main-links">
-        <router-link to="/announcements"><a>Объявления</a></router-link>
-        <router-link to="/information"><a>Информация</a></router-link>
-        <router-link to="/chat"><a>Чат</a></router-link>
-        <router-link to="/users"><a>Пользователи</a></router-link>
-      </div>
+      <router-link to="/announcements"><a>Объявления</a></router-link>
+      <router-link to="/information"><a>Информация</a></router-link>
+      <router-link to="/chat"><a>Чат</a></router-link>
+      <router-link to="/users"><a>Пользователи</a></router-link>
       <img src="../../assets/exit.svg" class="exit" alt="Выход" @click="exit">
     </nav>
     <main role="main">
@@ -95,14 +93,6 @@ export default {
   }
   nav figcaption {
     margin-left: 1em;
-  }
-  #main-links {
-    width: 50%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
   }
   nav a {
     color: white;

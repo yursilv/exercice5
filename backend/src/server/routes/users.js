@@ -111,11 +111,13 @@ function failure(ctx, err) {
             case constants.unauthorized: status = 401; break;
         }
     }
-    console.log(err);
     ctx.status = status;
     ctx.body = {
         status: 'error',
         data: error.data, // undefined most of the time
         message: error.message,
     };
+    if (status === 500) {
+        console.log(err);
+    }
 }

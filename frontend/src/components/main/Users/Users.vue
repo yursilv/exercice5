@@ -5,6 +5,7 @@
       <label>
         <input class="textinput" v-model="name" placeholder="Введите имя пользователя">
       </label>
+      <p>Найдено пользователей: {{filteredUsers.length}}</p>
       <userTicket  v-if="usersLoaded" v-for="u in filteredUsers"
                           v-bind:user="u"
                           v-bind:key="u.id">
@@ -55,6 +56,7 @@ export default {
 
 <style scoped>
   .tickets_container {
+    min-height: 80%;
     margin: 4% 20% 4% 20%;
     display: flex;
     flex-direction: column;
@@ -70,5 +72,8 @@ export default {
     width: 20em;
     height: 2em;
     margin-bottom: 2em;
+  }
+  p {
+    color: white;
   }
 </style>

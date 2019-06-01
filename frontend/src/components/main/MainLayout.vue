@@ -61,6 +61,7 @@ export default {
     justify-items: center;
     grid-template-rows: 10em 5em auto;
     grid-auto-rows: min-content;
+    overflow-y: scroll;
   }
   header {
     margin-top: 2em;
